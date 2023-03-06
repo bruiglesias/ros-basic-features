@@ -1,0 +1,6 @@
+<launch>
+
+    <include file="$(find ros_basic_tutorial)/src/motion/launch/teleop.launch" />
+    <node pkg="ros_basic_tutorial" type="turtlesim_cleaner.py" name="cleaner_node" />
+
+</launch>

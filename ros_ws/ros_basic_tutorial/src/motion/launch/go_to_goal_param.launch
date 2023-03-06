@@ -1,0 +1,10 @@
+<launch>
+
+    <param name="x_goal" value="1.0" />
+    <param name="y_goal" value="1.0" />
+
+    <include file="$(find ros_basic_tutorial)/src/motion/launch/teleop.launch" />
+
+    <node pkg="ros_basic_tutorial" type="turtlesim_cleaner.py" name="cleaner_node" output="screen" />
+
+</launch>

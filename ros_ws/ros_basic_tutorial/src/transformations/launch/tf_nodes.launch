@@ -1,0 +1,16 @@
+<launch>
+    <!-- Publicando transformações estáticas utilizando o launch file-->
+    <node name="publisher_1" pkg="tf2_ros" type="static_transform_publisher" args="1 0 0 0 0 0 /map /robot" />
+    <node name="publisher_2" pkg="tf2_ros" type="static_transform_publisher" args="0 -0.5 0 0 0 0 /robot /left_wheel" />
+    <node name="publisher_3" pkg="tf2_ros" type="static_transform_publisher" args="0 0.5 0 0 0 0 /robot /right_wheel" />
+
+    <!-- Publicando transformações estáticas utilizando um arquivo python -->
+    <node name="publisher_4" pkg="ros_basic_tutorial" type="tf_fixed_broadcaster.py" />
+    
+    <!-- Publicando transformações dinâmica utilizando um arquivo python -->
+    <node name="publisher_5" pkg="ros_basic_tutorial" type="tf_dinamic_broadcaster.py" />
+    
+    <!-- Abrindo o RVIZ -->
+    <node name="rviz" pkg="rviz" type="rviz" />
+
+</launch>

@@ -1,0 +1,4 @@
+<launch>
+    <node name="turtlesim" pkg="turtlesim" type="turtlesim_node" />
+    <node name="clear_node" pkg="ros_basic_tutorial" type="turtlesim_cleaner.py" output="screen" />
+</launch>
