@@ -1,0 +1,57 @@
+<launch>
+
+    <include file="$(find ros_basic_tutorial)/src/launch_files/bringup_turtlesim.launch">
+       
+        <!-- Passar valores aqui irá sobrescrever os valores padrão dos argumentos em bringup_turtleism.launch -->
+        <arg name="name" value="turtle_1" />
+        <arg name="keyboard_name" value="keyboard_1" />
+        <arg name="vel_topic" value="turtle_1/cmd_vel" />
+        <arg name="show_simulation" value="true" />
+
+        <!-- 
+            A diferença ente parametros e argumentos é que argumentos não mudam 
+            enquanto parametros podem ser mudados via linha de comando:
+            
+            rosparam set /turtle_1/background_b 0
+
+            rosparam get /turtle_1/background_b
+        -->
+        <param name="/turtle_1/background_b" value="0" />
+
+    </include>
+
+    <include file="$(find ros_basic_tutorial)/src/launch_files/bringup_turtlesim.launch">
+        <arg name="name" value="turtle_2" />
+        <arg name="keyboard_name" value="keyboard_2" />
+        <arg name="vel_topic" value="turtle_2/cmd_vel" />
+        <arg name="show_simulation" value="true" />
+    </include>
+
+    <include file="$(find ros_basic_tutorial)/src/launch_files/bringup_turtlesim.launch">
+        <arg name="name" value="turtle_3" />
+        <arg name="keyboard_name" value="keyboard_3" />
+        <arg name="vel_topic" value="turtle_3/cmd_vel" />
+        <arg name="show_simulation" value="true" />
+    </include>
+
+
+    <include file="$(find ros_basic_tutorial)/src/launch_files/bringup_turtlesim.launch">
+        <arg name="name" value="turtle_4" />
+        <arg name="keyboard_name" value="keyboard_4" />
+        <arg name="vel_topic" value="turtle_4/cmd_vel" />
+        <arg name="show_simulation" value="true" />
+    </include>
+
+
+    <include file="$(find ros_basic_tutorial)/src/launch_files/bringup_turtlesim.launch">
+        <arg name="name" value="turtle_5" />
+        <arg name="keyboard_name" value="keyboard_5" />
+        <arg name="vel_topic" value="turtle_5/cmd_vel" />
+        <arg name="show_simulation" value="true" />
+    </include> 
+  
+
+    
+
+
+</launch>
